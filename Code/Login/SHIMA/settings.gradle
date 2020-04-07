@@ -1,0 +1,2 @@
+rootProject.name='SHIMA'
+include ':app'
