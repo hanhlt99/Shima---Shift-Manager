@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Wage</string>
+    <string name="luong">Lương</string>
+    <string name="hangThang">Hằng tháng</string>
+    <string name="tong"> Tổng </string>
+    <string name="chiTiet"> Chi tiết </string>
+    <string name="hoVaTen"> Họ và tên </string>
+    <string name="viTri"> Vị trí </string>
+    <string name="soBuoiLam"> Số buổi làm </string>
+    <string name="luongTheoThang"> Lương theo tháng </string>
+    <string name="tienThuong"> Tiền thưởng </string>
+    <string name="tienPhat"> Tiền phạt </string>
+    <string name="luongThucTra"> Lương thực trả </string>
+    <string name="nhanVien"> Nhân viên </string>
+    <string name="quanLy"> Quản lý </string>
+    <string name="thietLapLuong"> Thiêt lập lương </string>
+    <string name="timKiemTheoChucNang"> Tìm kiếm theo chức vụ </string>
+    <string name="caiDatLuong"> Cài đạt lương </string>
+    <string name="nhapLuongTheoGio"> Nhập lương theo giờ  </string>
+    <string name="nhapThuongTheoThang"> Nhập thưởng theo tháng </string>
+    <string name="nhapPhatTheoThang"> Nhập phạt theo tháng </string>
+    <string name="thuong"> Thưởng </string>
+    <string name="phat"> Phạt </string>
+</resources>

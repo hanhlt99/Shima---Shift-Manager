@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".staff.WageMonthlyStaffActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+            <ImageView
+                android:id="@+id/imgBackWageStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_left_24dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/luong"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            style="@style/styleText"
+            android:text="@string/hangThang"
+            android:gravity="center"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recMonthStaff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_month"
+            android:layout_margin="16dp"
+            />
+
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:padding="16dp"-->
+        <!--            >-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 1"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="1000"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/silver"-->
+        <!--                    android:gravity="center"-->
+        <!--                    android:text="@string/tong" />-->
+
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 2"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="1000"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 3"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="1000"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 4"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 5"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 6"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 7"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 8"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 9"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 10"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 11"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:orientation="vertical"-->
+        <!--                android:layout_marginBottom="16dp"-->
+        <!--                >-->
+        <!--                <TextView-->
+        <!--                    style="@style/styleText"-->
+        <!--                    android:background="@color/colorPrimary"-->
+        <!--                    android:text="Tháng 12"-->
+        <!--                    />-->
+        <!--                <LinearLayout-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    >-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        >-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:text="@string/tong"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                        <LinearLayout-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:background="@color/silver"-->
+        <!--                            android:gravity="center"-->
+        <!--                            >-->
+
+        <!--                            <TextView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:text="0"-->
+        <!--                                />-->
+        <!--                            <ImageView-->
+        <!--                                android:layout_width="wrap_content"-->
+        <!--                                android:layout_height="wrap_content"-->
+        <!--                                android:src="@drawable/ic_attach_money_24dp"-->
+        <!--                                />-->
+
+        <!--                        </LinearLayout>-->
+        <!--                    </LinearLayout>-->
+        <!--                    <LinearLayout-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:layout_weight="1"-->
+        <!--                        android:gravity="center"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                        android:background="@color/silver"-->
+        <!--                        >-->
+        <!--                        <ImageView-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:src="@drawable/ic_info_outline_24dp"-->
+        <!--                            />-->
+        <!--                        <TextView-->
+        <!--                            style="@style/styleText"-->
+        <!--                            android:text="@string/chiTiet"-->
+        <!--                            android:gravity="center"-->
+        <!--                            />-->
+        <!--                    </LinearLayout>-->
+        <!--                </LinearLayout>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
+    </LinearLayout>
+
+</ScrollView>
